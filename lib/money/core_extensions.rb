@@ -27,6 +27,7 @@ module MoneyExtensions
   def convert_to_money(options = {})
     options[:precision] ||= Money.default_precision
     options[:currency]  ||= "GBP"
+    
     Money.new(self.to_f * 10**options[:precision], options[:currency], options[:precision])
   end
   
@@ -40,10 +41,10 @@ module MoneyExtensions
   
 end
 
-class Fixnum; include MoneyExtensions; end
-class Float; include MoneyExtensions; end
-class String; include MoneyExtensions; end
-class Money; include MoneyExtensions; end
+class Fixnum;     include MoneyExtensions; end
+class Float;      include MoneyExtensions; end
+class String;     include MoneyExtensions; end
+class Money;      include MoneyExtensions; end
 class BigDecimal; include MoneyExtensions; end
    
 

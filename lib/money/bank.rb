@@ -10,7 +10,6 @@ class Bank
   
   def self.rates
     self.update_rates if EXCHANGE_RATES.empty?
-
     EXCHANGE_RATES 
   end
   
