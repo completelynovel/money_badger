@@ -78,8 +78,13 @@ module MoneyBadger
             money = amount.to_money(:precision => opt[:precision], :currency => self.#{self.money_options[name][:currency_field]})
             
             raise_wrong_currency_type(self.send(opt[:currency_field]), money.currency) unless amount.is_a?(Money)
+            
             self.#{self.money_options[name][:value_field]}    = money.value
             self.#{self.money_options[name][:currency_field]} = money.currency if self.class.column_names.include?(opt[:currency_field].to_s)
+          end
+          
+          def self.#{name}_sum(collection)
+            collection.collect(&:#{name}).sum
           end
         }
         class_eval method_declaration
