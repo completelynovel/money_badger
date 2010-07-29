@@ -84,7 +84,9 @@ module MoneyBadger
           end
           
           def self.#{name}_sum(collection)
-            collection.collect(&:#{name}).sum
+            m = collection.collect(&:#{name}).sum
+            m = Money.new(0) if m.zero?
+            m
           end
         }
         class_eval method_declaration
