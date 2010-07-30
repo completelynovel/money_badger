@@ -1,17 +1,22 @@
 module MoneyStringExtensions
   
   def to_money(options = {})
-    options[:currency]  ||= Money.default_currency
     
     # Get the currency
-    matches  = scan(/([A-Z]{2,3})/)
-    currency = matches[0] ? matches[0][0] : options[:currency]
+    if options[:currency].present?
+      currency = options[:currency]
+    else
+      matches  = scan(/([A-Z]{2,3})/)
+      currency = matches[0] ? matches[0][0] : Money.default_currency 
+    end
     
     # Get the precision
-    unless precision.present?
+    if options[:precision].present?
+      precision = options[:precision]
+    else
       precision = scan(/\.(\d+)/).to_s.length # look for the decimal point
-      precision = Money.default_precision if options[:precision] < 2 # reset to default precision if not precise enough
     end
+    precision = Money.default_precision if precision < 2 # reset to default precision if not precise enough
 
     # Get the cents amount
     str     = self =~ /^\./ ? "0#{self}" : self
