@@ -33,6 +33,16 @@ module MoneyExtensions
   
   # use to create a money object from another class
   def to_money(options = {})
+    # keep the same currency if present
+    if self.is_a?(Money) && self.currency.present? && !options[:currency].present?
+      options[:currency] = self.currency
+    end
+
+    # keep the same precision if present
+    if self.is_a?(Money) && self.precision.present? && !options[:precision].present?
+      options[:precision] = self.precision
+    end
+    
     to_s.to_money(options)
   end
   
