@@ -81,6 +81,12 @@ module MoneyBadger
             self.#{self.money_options[name][:value_field]}    = money.value
             self.#{self.money_options[name][:currency_field]} = money.currency if self.class.column_names.include?(opt[:currency_field].to_s)
           end
+          
+          def self.#{name}_sum(collection)
+            m = collection.collect(&:#{name}).sum
+            m = Money.new(0) if m.zero?
+            m
+          end
         }
         class_eval method_declaration
         

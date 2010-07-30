@@ -1,16 +1,17 @@
-class String
+module MoneyStringExtensions
   
   def to_money(options = {})
     options[:currency]  ||= Money.default_currency
-    options[:precision] ||= Money.default_precision
     
     # Get the currency
     matches  = scan(/([A-Z]{2,3})/)
     currency = matches[0] ? matches[0][0] : options[:currency]
     
     # Get the precision
-    precision = options[:precision].to_i
-    precision = Money.default_precision if precision < Money.default_precision
+    unless precision.present?
+      precision = scan(/\.(\d+)/).to_s.length # look for the decimal point
+      precision = Money.default_precision if options[:precision] < 2 # reset to default precision if not precise enough
+    end
 
     # Get the cents amount
     str     = self =~ /^\./ ? "0#{self}" : self
@@ -25,22 +26,15 @@ end
 
 module MoneyExtensions
   
+  # use to create a money object from another class
   def to_money(options = {})
-    if self.is_a?(Money) && self.currency.present? && !options[:currency].present?
-      options[:currency] = self.currency
-    end
-
-    if self.is_a?(Money) && self.precision.present? && !options[:precision].present?
-      options[:precision] = self.precision
-    end
-        
     to_s.to_money(options)
   end
   
 end
-
-class Fixnum;     include MoneyExtensions; end
-class Float;      include MoneyExtensions; end
-class String;     include MoneyExtensions; end
-class Money;      include MoneyExtensions; end
+  
+class Fixnum; include MoneyExtensions; end
+class Float; include MoneyExtensions; end
+class Money; include MoneyExtensions; end
 class BigDecimal; include MoneyExtensions; end
+class String; include MoneyStringExtensions; end
