@@ -2,21 +2,33 @@ require 'hpricot'
 
 class Bank
   
-  cattr_accessor :commission
-  @@commission  = 0.05
+  begin
+    @@config = YAML.load_file("#{Rails.root}/config/bank.yml") || {}
+  rescue
+    @@config = {}
+  end
   
-  ECB_RATES_URL = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
+  ECB_RATES_URL = @@config['xml_url'] || 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
   EXCHANGE_RATES = {} # can initialise a rates hash with default values here
+  @@commission  = @@config['commission'] || 0 # how much to charge above mid-market quoted rates (takes account of banks actual exchange rates)
+  @@exchange_rates = @@config['exchange_rates'] || {}
+  @@non_tradeable_currencies = @@config['non_tradeable_currencies'] || []
+  
+  cattr_accessor :exchange_rates
+  cattr_accessor :commission
+  cattr_accessor :non_tradeable_currencies
   
   def self.rates
     self.update_rates if EXCHANGE_RATES.empty?
+
     EXCHANGE_RATES 
   end
   
   # Used to exchange a money object between one currency and another
   def self.exchange(money_object, new_currency, options = {})
-    options[:exclude_commission] ||= false
+    return nil unless tradeable?(money_object.currency) # if you can't trade a currency return nil
     
+    options[:exclude_commission] ||= false
     if money_object.currency != new_currency
       # find the exchange appropriate exchange rates, convert to big decimal to avoid floating point errors
       old_rate = BigDecimal.new(self.rate_for(money_object.currency).to_s)
@@ -24,7 +36,7 @@ class Bank
       # do the calculation -> new currency = new rate / old rate  * amount
       new_amount = money_object * (new_rate / old_rate )
       # add in some commission if appropriate to take into account non mid market rates most sellers achieve
-      new_amount = new_amount * (1 + self.commission) unless options[:exclude_commission].present?
+      new_amount = new_amount * (1 + @@commission) unless options[:exclude_commission].present?
       # convert to new money currency 
       new_amount.to_money(:currency => new_currency)
     else
@@ -36,17 +48,25 @@ class Bank
   #
   # rates constant is a global var containing a hash 
   def self.update_rates
+    clear_rates
     add_currency_rate("EUR", 1)
     
     fetch_rates.each do |currency_rate|
       add_currency_rate(currency_rate[:currency], currency_rate[:rate].to_f)
     end
+    add_currency_rates(@@exchange_rates) # add_currency_rate("CREDIT", 1)
     
     rates
   end
   
   def self.add_currency_rate(currency, rate)
     EXCHANGE_RATES[currency] = rate
+  end
+  
+  def self.add_currency_rates(rates_hash)
+    rates_hash.each do |currency, rate|
+      EXCHANGE_RATES[currency] = rate
+    end
   end
   
   def self.clear_rates
@@ -67,14 +87,11 @@ class Bank
   end
   
   def self.symbol_for(currency)
-    case currency
-    when "USD", "CAD"
-      "$"
-    when "GBP"
-      "£"
-    when "EUR"
-      "€"
-    end
+    @@config['currency_symbols'][currency] || "$"
+  end
+  
+  def self.tradeable?(currency)
+    return true unless @@non_tradeable_currencies.include?(currency)
   end
   
 end
