@@ -26,7 +26,7 @@ class Bank
   
   # Used to exchange a money object between one currency and another
   def self.exchange(money_object, new_currency, options = {})
-    return nil unless tradeable?(money_object.currency) # if you can't trade a currency return nil
+    #return nil if self.can_convert?(money_object, new_currency)
     
     options[:exclude_commission] ||= false
     if money_object.currency != new_currency
@@ -54,7 +54,7 @@ class Bank
     fetch_rates.each do |currency_rate|
       add_currency_rate(currency_rate[:currency], currency_rate[:rate].to_f)
     end
-    add_currency_rates(@@exchange_rates) # add_currency_rate("CREDIT", 1)
+    add_currency_rates(@@exchange_rates) # add_currency_rates("CREDIT" => 1, "YEN" => 208)
     
     rates
   end
@@ -92,6 +92,10 @@ class Bank
   
   def self.tradeable?(currency)
     return true unless @@non_tradeable_currencies.include?(currency)
+  end
+  
+  def self.can_convert?(money_object, new_currency)
+    tradeable?(money_object.currency) || !tradeable?(money_object.currency) && tradeable?(new_currency)
   end
   
 end

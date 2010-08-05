@@ -128,8 +128,8 @@ class Money
   # ---------------- Foreign exchange ------------------------
 
   # Recieve the amount of this money object in another currency   
-  def exchange_to(other_currency)
-    self.class.bank.exchange(self, other_currency)
+  def exchange_to(other_currency, options = {})
+    self.class.bank.exchange(self, other_currency, options)
   end
 
 end
