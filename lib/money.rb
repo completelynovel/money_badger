@@ -67,6 +67,14 @@ class Money
     to_money(:currency => currency)
   end
   
+  def <=(money_or_float)
+    BigDecimal.new(self.to_s) <= BigDecimal.new(money_or_float.to_s)
+  end
+  
+  def >=(money_or_float)
+    BigDecimal.new(self.to_s) >= BigDecimal.new(money_or_float.to_s)
+  end
+  
   # ------------- Interrogation -----------------------
   
   # Test if the money amount is zero
