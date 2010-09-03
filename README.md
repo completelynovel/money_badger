@@ -16,6 +16,22 @@ Hpricot Gem : http://github.com/hpricot/hpricot
 
 ## Installation
 
+create a bank.yml file in /config
+
+commission: 0.05 # how much your bank charges for currency conversion
+exchange_rates: # additional exchange rates you offer for your own currencies. Use other currency ISOs if you want to match it to that currency
+  GBPC: GBP
+  EURC: EUR
+  USDC: USD
+non_tradeable_currencies: # the currencies which you don't wish to exchange into other currencies such as store credit
+    - GBPC
+    - USDC
+    - EURC 
+currency_symbols: # currency symbols for money.format method
+  GBP: "£"
+  EUR: "€"
+
+
 The money gem provide an ActiveRecord Extension :
 
     has_money(name, options = {})

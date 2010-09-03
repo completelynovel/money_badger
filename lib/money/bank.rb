@@ -65,6 +65,10 @@ class Bank
   
   def self.add_currency_rates(rates_hash)
     rates_hash.each do |currency, rate|
+      # if the rate is a reference to another currency set it to the same rate otherwise use value
+      if rate.is_a?(String)
+        rate = rates[rate]
+      end
       EXCHANGE_RATES[currency] = rate
     end
   end
