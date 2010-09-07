@@ -97,7 +97,7 @@ module MoneyBadger
     module InstanceMethods
       
       def raise_wrong_currency_type(currency1, currency2)
-        if currency1.nil? || currency2.nil? || currency1 != currency2
+        unless currency1.present? && currency2.present? && currency1 == currency2 || self.new_record?
           raise "Currency is set to #{currency1} - can't assign Money value with currency of #{currency2}"
         end        
       end
