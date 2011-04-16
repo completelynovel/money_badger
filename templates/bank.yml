@@ -1,0 +1,22 @@
+# Set up the Bank object used in MoneyBadger
+
+# Commission is the charge the bank will take. For example it could offer 5% (0.05) either side of the mid market rate
+commission: 0.00
+
+# A hash of the initial exchange rates based on the EURO being 1. MoneyBadger fetches the rates on load if an internet connection is present.
+exchange_rates:
+  EUR: 1
+  USD: 1.4434
+  JPY: 122.26
+  GBP: 0.8836
+  CREDIT: USD # needs to be after USD to work
+
+# currencies which can't be converted to other currencies
+non_tradeable_currencies:
+  - CREDIT
+
+# an array of currencies and their symbols, money_badger will default to $ for unknown currency symbols
+currency_symbols:
+  GBP: "£"
+  EUR: "€"
+  CREDIT: "#"

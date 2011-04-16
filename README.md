@@ -12,7 +12,9 @@ A money object consists of three attributes :
 
 ## Requirements
 
-Hpricot Gem : http://github.com/hpricot/hpricot for fetching currency rates
+Hpricot Gem for fetching currency rates
+ActiveRecord for tie into rails
+rspec for unit tests
 
 ## Installation
 
@@ -145,5 +147,10 @@ The precision of a sum automatically changes to keep the most precise result.
     
     (a + c).format #=> "$12.56"
 
+### TODO
+
+Add a generator for copying the bank.yml template into config
+
+Use railties for link to ActiveRecord
 
 Copyright (c) 2010 completelynovel.com, released under the MIT license
