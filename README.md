@@ -18,7 +18,7 @@ rspec for unit tests
 
 ## Installation
 
-create a bank.yml file in /config/bank.yml
+create a bank.yml file in /config/bank.yml. A template is in templates/bank.yml
 
 commission: 0.05 # how much your bank charges for currency conversion
 exchange_rates: # additional exchange rates you offer for your own currencies. Use other currency ISOs if you want to match it to that currency
@@ -149,8 +149,8 @@ The precision of a sum automatically changes to keep the most precise result.
 
 ### TODO
 
-Add a generator for copying the bank.yml template into config
-
-Use railties for link to ActiveRecord
+* Add a generator for copying the bank.yml template into config
+* Use railties for link to ActiveRecord
+* Add tests to has_money
 
 Copyright (c) 2010 completelynovel.com, released under the MIT license
