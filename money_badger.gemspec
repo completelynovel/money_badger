@@ -1,9 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "money_badger/bank"
-require "money_badger/core_extensions"
-require "money_badger/money"
-require "money_badger/version"
+require "money_badger"
 
 Gem::Specification.new do |s|
   s.name        = "money_badger"
@@ -19,11 +16,12 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
   
-  s.add_development_dependency("rspec", "~> 2.0.1")
-  s.add_development_dependency("watchr", "~> 0.7")
+  s.add_development_dependency "rspec", "~> 2.0.1"
+  s.add_development_dependency "watchr", "~> 0.7"
+  s.add_development_dependency "activerecord", "~> 3.0.0"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.require_paths = ["lib", "rails"]
 end

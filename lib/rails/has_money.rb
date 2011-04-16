@@ -18,17 +18,16 @@ module MoneyBadger
       def has_money(name, options = {})
         
         include InstanceMethods
-        
+            
         #####
         # Init the money option
         #####
-        class << self
-          attr_accessor :money_options
-        end
+        cattr_accessor :money_options
+        self.money_options ||= {}
         
         #####
         # Init new money
-        #####      
+        #####
         self.money_options[name] = {}
         
         #####
