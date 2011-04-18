@@ -1,15 +1,11 @@
-
 module MoneyBadger
-  
   class Money
-    #include Comparable
-
     attr_reader :value, :currency, :precision
 
     class MoneyError < StandardError# :nodoc:
     end
     
-    @@bank = Bank # a bank object to handle currencies -> see money_badger/bank
+    @@bank = MoneyBadger::Bank # a bank object to handle currencies -> see money_badger/bank
     @@default_currency = "USD"
     @@default_precision = 2
     class << self
@@ -87,6 +83,10 @@ module MoneyBadger
       BigDecimal.new(self.to_s) >= BigDecimal.new(money_or_float.to_s)
     end
     
+    def ==(thing)
+      thing.is_a?(Money) && self.to_s == thing.to_s && self.currency == thing.currency && self.precision == thing.precision
+    end
+    
     # ------------- Interrogation -----------------------
     
     # Test if the money amount is zero
@@ -121,7 +121,7 @@ module MoneyBadger
     end
     
     def currency_symbol
-      Bank.symbol_for(self.currency)
+      MoneyBadger::Bank.symbol_for(self.currency)
     end
 
     def in_cents(options = {})
@@ -137,13 +137,17 @@ module MoneyBadger
     end
     
     # -------------- Class translation -----------
-
-    def to_s
-      to_f.to_s
-    end
     
     def to_f
-      value.to_f / 10 ** precision
+      self.value.to_f / 10 ** precision
+    end
+
+    def to_s
+      self.to_f.to_s
+    end
+    
+    def to_i
+      self.to_f.to_i
     end
     
     # ---------------- Foreign exchange ------------------------
@@ -154,5 +158,4 @@ module MoneyBadger
     end
 
   end
-  
 end
