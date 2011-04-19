@@ -7,7 +7,7 @@ module MoneyBadger
     describe "def to_money(options = {})" do
       
       it "should return a money object" do
-        "500".to_money.should be_a(MoneyBadger::Money)
+        "500".to_money.should be_a(Money)
       end
       
       it "should default to the default currency" do
@@ -45,17 +45,17 @@ module MoneyBadger
       
       it "should convert a float into a money object" do
         float = 4.50
-        float.to_money.should be_a(MoneyBadger::Money)
+        float.to_money.should be_a(Money)
       end
       
       it "should convert an Integer into a money" do
         int = 500
-        int.to_money.should be_a(MoneyBadger::Money)
+        int.to_money.should be_a(Money)
       end
       
       it "should convert a BigDecimal to a money" do
         big_decimal = BigDecimal.new("500")
-        big_decimal.to_money.should be_a(MoneyBadger::Money)
+        big_decimal.to_money.should be_a(Money)
       end
       
     end

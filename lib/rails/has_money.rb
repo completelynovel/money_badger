@@ -63,7 +63,7 @@ module MoneyBadger
         #####
         # Define the precision of the money object
         #####
-        self.money_options[name][:precision] = options[:precision] || MoneyBadger::Money.default_precision
+        self.money_options[name][:precision] = options[:precision] || Money.default_precision
 
         #####
         # Create getter and setter for the money

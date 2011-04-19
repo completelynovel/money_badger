@@ -1,6 +1,6 @@
 # MoneyBadger
 
-A rails plugin to handle currency and foreign exchange.
+A gem to handle currency and foreign exchange.
 
 Keeps things accurate and avoids floating point errors.
 
@@ -15,66 +15,6 @@ A money object consists of three attributes :
 Hpricot Gem for fetching currency rates
 ActiveRecord for tie into rails
 rspec for unit tests
-
-## Installation
-
-create a bank.yml file in /config/bank.yml. A template is in templates/bank.yml
-
-commission: 0.05 # how much your bank charges for currency conversion
-exchange_rates: # additional exchange rates you offer for your own currencies. Use other currency ISOs if you want to match it to that currency
-  EUR: 1
-  GBP: 0.8
-  USD: 1.3
-  CREDIT: USD
-non_tradeable_currencies: # the currencies which you don't wish to exchange into other currencies such as store credit
-    - CREDIT
-currency_symbols: # currency symbols for money.format method
-  GBP: "£"
-  EUR: "€"
-  USD: "$"
-
-The money gem provide an ActiveRecord Extension :
-
-    has_money(name, options = {})
-
-Place in your model to enable money. Store money in an integer field which defaults to "#{name}_value".
-has_money provides reader writer methods.
-
-Options are :
-
-* :currency  - specify a proc to determine the currency ie Proc.new{|object| object.currency}. The default is to look for a 'currency' instance method in the model has_money is inserted into.
-* :precision - specify a precision to save the currency to.  If you are doing divisions, multiplications or cumulative totals you might like to specify a higher precision. Defaults to 2.
-* :value     - specify the name of the field or method to which an integer value can be stored.
-
-Examples :
-
-    class Item < ActiveRecord::Base
-      belongs_to :country
-      
-      has_money :total, 
-                :precision => 3, 
-                :value => :total_money, 
-                :currency => :currency
-      
-      delegate :currency => :country
-    end
-
-where
-
-    class Country < ActiveRecord::Base
-      has_many :items
-      def currency
-        "USD"
-      end
-    end
-
-## Use it !
-
-    i = Item.new
-    i.total.to_f #=> 0.000
-    i.total = Money.new(500)
-    i.total.to_f #=> 5.000
-    i.total.format #=> "$5.00"
 
 
 ### Basics
@@ -146,6 +86,64 @@ The precision of a sum automatically changes to keep the most precise result.
     (c * 3).to_f #=> 15.07023
     
     (a + c).format #=> "$12.56"
+
+
+## Using with Rails
+
+Money Badger comes with an ActiveRecord method called has_money.
+
+    has_money(name, options = {})
+
+Place in your model to enable money. Store money in an integer field which defaults to "#{name}_value".
+has_money provides reader writer methods.
+
+Options are :
+
+* :currency  - specify a proc to determine the currency ie Proc.new{|object| object.currency}. The default is to look for a 'currency' instance method in the model has_money is inserted into.
+* :precision - specify a precision to save the currency to.  If you are doing divisions, multiplications or cumulative totals you might like to specify a higher precision. Defaults to 2.
+* :value     - specify the name of the field or method to which an integer value can be stored.
+
+Examples :
+
+    class Item < ActiveRecord::Base
+      belongs_to :country
+      
+      has_money :total, 
+                :precision => 3, 
+                :value => :total_money, 
+                :currency => :currency
+      
+      def currency
+        "USD"
+      end
+    end
+
+## Use it !
+
+    i = Item.new
+    i.total.to_f #=> 0.000
+    i.total = Money.new(500)
+    i.total.to_f #=> 5.000
+    i.total.format #=> "$5.00"
+
+## Setting up defaults for Bank
+
+Create a bank.yml file in /config/bank.yml to initialize settings. A template is in templates/bank.yml
+
+commission: 0.05 # how much your bank charges for currency conversion
+exchange_rates: # additional exchange rates you offer for your own currencies. Use other currency ISOs if you want to match it to that currency
+  EUR: 1
+  GBP: 0.8
+  USD: 1.3
+  CREDIT: USD
+non_tradeable_currencies: # the currencies which you don't wish to exchange into other currencies such as store credit
+    - CREDIT
+currency_symbols: # currency symbols for money.format method
+  GBP: "£"
+  EUR: "€"
+  USD: "$"
+
+The money gem provide an ActiveRecord Extension :
 
 ### TODO
 

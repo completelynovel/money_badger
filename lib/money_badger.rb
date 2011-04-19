@@ -5,5 +5,6 @@ require 'money_badger/money'
 require 'money_badger/version'
 
 # rails addition
-require 'rails/has_money'
-require 'rails/money_badger_init'
+['rails/has_money', 'rails/money_badger_init'].each do |file|
+  require file
+end if defined? ActiveRecord

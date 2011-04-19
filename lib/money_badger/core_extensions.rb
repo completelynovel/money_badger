@@ -64,7 +64,7 @@ end
   
 class Fixnum;                   include MoneyBadger::MoneyExtensions; end
 class Float;                    include MoneyBadger::MoneyExtensions; end
-class MoneyBadger::Money;       include MoneyBadger::MoneyExtensions; end
+class Money;                    include MoneyBadger::MoneyExtensions; end
 class BigDecimal;               include MoneyBadger::MoneyExtensions; end
 
 class String;                   include MoneyBadger::StringExtensions; end
@@ -72,4 +72,4 @@ class String;                   include MoneyBadger::StringExtensions; end
 class Fixnum;                   include MoneyBadger::BigDecimalExtensions; end
 class Float;                    include MoneyBadger::BigDecimalExtensions; end
 class String;                   include MoneyBadger::BigDecimalExtensions; end
-class MoneyBadger::Money;       include MoneyBadger::BigDecimalExtensions; end
+class Money;                    include MoneyBadger::BigDecimalExtensions; end
