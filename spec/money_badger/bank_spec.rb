@@ -57,25 +57,32 @@ module MoneyBadger
     end
     
     describe "def update_rates" do
+      before :each do
+        Bank.stub(:config).and_return(
+          {:commission => 0, 
+          :exchange_rates => {:EUR => 1, :USD => 1.4434, :JPY => 122.26, :GBP => 0.8836, :CREDIT => :USD}, 
+          :currency_symbols => { :GBP => "£", :EUR => "€", :CREDIT => "#" } 
+          })
+      end
       
       it "should clear the rates" do
         rates = {"USD" => 1}
         Bank.exchange_rates = rates
-        Bank.should_receive(:fetch_rates).and_return(true)
         Bank.should_receive(:clear_rates).and_return(true)
+        Bank.should_receive(:fetch_rates).and_return({})
+        Bank.should_receive(:add_currency_rate).and_return(true)
         Bank.update_rates
       end
       
       it "should add a currency rate EUR => 1" do
-        Bank.should_receive(:fetch_rates).and_return(true)
+        Bank.should_receive(:fetch_rates).and_return({})
         Bank.update_rates
         Bank.exchange_rates["EUR"].should == 1
       end
       
-      it "should call add rates twice" do
-        Bank.should_receive(:add_currency_rates).twice.and_return(true)
-        Bank.should_receive(:fetch_rates).and_return(true)
+      it "should update the currency rates from the european exchange bank" do
         Bank.update_rates
+        Bank.exchange_rates.length.should > 4
       end
       
     end

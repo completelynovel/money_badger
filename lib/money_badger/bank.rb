@@ -1,22 +1,16 @@
-
-  
 require 'hpricot'
 require 'open-uri'
 
 module MoneyBadger
   class Bank
     
+    EXCHANGE_RATES              = {}
     begin
-      @@config = YAML.load_file("#{Rails.root}/config/bank.yml") || {}
-    rescue
-      @@config = {}
+      @@config                  = YAML.load_file("#{Rails.root}/config/bank.yml") || {}
+    rescue Exception => e
+      @@config                  = {}
     end
-    
-    @@commission                = @@config['commission'] || 0 # how much to charge above mid-market quoted rates (takes account of banks actual exchange rates)
-    @@exchange_rates            = {}
-    @@non_tradeable_currencies  = @@config['non_tradeable_currencies'] || []
-    
-    @@ecb_rates_url             = @@config['xml_url'] || 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
+    @@rates_url                 = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
     
     class << self
       def exchange_rates(options = {})
@@ -26,27 +20,40 @@ module MoneyBadger
       
       def exchange_rates=(rates_hash)
         return false unless rates_hash.is_a?(Hash)
-        @@exchange_rates = rates_hash
+        EXCHANGE_RATES = rates_hash
       end
       
       def commission
-        @@commission
+        config['commission'] || 0
       end
       
       def commission=(rate)
-        @@commission = rate
+        config['commission'] = rate
       end
       
       def non_tradeable_currencies
-        @@non_tradeable_currencies
+        config['non_tradeable_currencies'] || []
       end
       
       def non_tradeable_currencies=(currency_array)
-        @@non_tradeable_currencies = currency_array
+        return unless currency_array.is_a?(Array)
+        config['non_tradeable_currencies'] = currency_array
       end
       
       def currency_symbols
-        @@config['currency_symbols']
+        config['currency_symbols']
+      end
+      
+      def rates_url
+        config['xml_url'] || @@rates_url
+      end
+      
+      def config
+        @@config
+      end
+      
+      def config=(config_hash)
+        @@config = config_hash
       end
     
       # updates the rates constant
@@ -55,34 +62,39 @@ module MoneyBadger
       def update_rates
         clear_rates
         add_currency_rate("EUR", 1)
-        add_currency_rates(@@config['exchange_rates']) # rates from bank.yml
-        add_currency_rates(fetch_rates)
+        add_currency_rates(config["exchange_rates"]) # rates from bank.yml
+          
+        fetch_rates.each do |currency_rate|
+          add_currency_rate(currency_rate[:currency], currency_rate[:rate].to_f)
+        end
+        EXCHANGE_RATES
       end
       
       def add_currency_rate(currency, rate)
-        @@exchange_rates[currency] = rate
+        EXCHANGE_RATES[currency] = rate
       end
       
-      def add_currency_rates(rates_hash)
+      def add_currency_rates(rates_hash = {})
         return unless rates_hash.is_a?(Hash)
         rates_hash.each do |currency, rate|
           # if the rate is a reference to another currency set it to the same rate otherwise use value
           if rate.is_a?(String)
-            rate = @@exchange_rates[rate]
+            rate = EXCHANGE_RATES[rate]
           end
-          @@exchange_rates[currency] = rate
+          EXCHANGE_RATES[currency] = rate
         end
       end
       
       def clear_rates
-        @@exchange_rates.clear
+        EXCHANGE_RATES.clear
       end
       
       def fetch_rates
         begin
-          doc = Hpricot.XML(open(@@ecb_rates_url))
+          doc = Hpricot.XML(open(rates_url))
           doc.search("gesmes:Envelope/Cube/Cube/Cube")
         rescue
+          puts "Rescuing from failing to fetch currency rates"
           {}
         end
       end
