@@ -90,8 +90,31 @@ class Money
     BigDecimal.new(self.to_s) > BigDecimal.new(money_or_float.to_s)
   end
   
+  # return Boolean true if the value, currency and precision are the same
   def ==(thing)
-    thing.is_a?(Money) && self.to_s == thing.to_s && self.currency == thing.currency && self.precision == thing.precision
+    if thing.is_a?(Money)
+      self.to_f == thing.to_f && self.currency == thing.currency && self.precision == thing.precision
+    elsif thing.respond_to?(:to_f)
+      self.to_f == thing.to_f
+    else
+      false
+    end
+  end
+  
+  # return Boolean true if the value is the same
+  def =~(thing)
+    if thing.is_a?(Money)
+      self.to_f == thing.to_f && self.currency == thing.currency
+    elsif thing.respond_to?(:to_f)
+      self.to_f == thing.to_f
+    else
+      false
+    end
+  end
+  
+  # return Boolean true if the value, currency and precision are not the same
+  def !=(thing)
+    !(self == thing)
   end
   
   # ------------- Interrogation -----------------------
@@ -103,7 +126,7 @@ class Money
 
   # Do two money objects equal? Only works if both objects are of the same currency
   def eql?(other_money)
-    value == other_money.value && currency == other_money.currency
+    self == other_money
   end
   
   # Sort monies by their value

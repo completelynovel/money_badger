@@ -2,6 +2,11 @@ require 'spec_helper'
 
 describe Money do
   
+  let (:money)    { Money.new(1000) }
+  let (:dollars)  { Money.new(500, "USD") }
+  let (:pounds)   { Money.new(300, "GBP") }
+  let (:euros)    { Money.new(100, "EUR") }
+  
   it "should have a bank" do
     Money.bank.should == Bank
   end
@@ -9,20 +14,17 @@ describe Money do
   describe "def initialize" do
     
     context "with blank attrs" do
-      before :each do
-        @money = Money.new
-      end
       
       it "should be a money object" do
-        @money.should be_a(Money)
+        money.should be_a(Money)
       end
       
       it "should have the default currency" do
-        @money.currency.should == Money.default_currency
+        money.currency.should == Money.default_currency
       end
       
       it "should have the default precision" do
-        @money.precision.should == Money.default_precision
+        money.precision.should == Money.default_precision
       end
     end
     
@@ -241,6 +243,66 @@ describe Money do
     it "should return false if the money value is not 0" do
       Money.new(5).zero?.should be_false
       Money.new(-5).zero?.should be_false
+    end
+  end
+  
+  describe "def ==(money_or_thing)" do
+    before :each do
+      @money1 = Money.new(500, "USD", 2)
+    end
+    
+    it "should return true if the money value, currency and precision are the same" do
+      (@money1 == Money.new(500, "USD", 2)).should be_true
+    end
+    
+    it "should return false if the money value is not equal" do
+      (@money1 == Money.new(23, "USD", 2)).should be_false
+    end
+    
+    it "should return false if the money currency is not equal" do
+      (@money1 == Money.new(500, "GBP", 2)).should be_false
+    end
+    
+    it "should return false if the money precision is not equal" do
+      (@money1 == Money.new(500, "USD", 7)).should be_false
+    end
+    
+    it "should return true if compared to a number of the same value" do
+      (@money1 == 5).should be_true
+    end
+    
+    it "should return false if compared ot a number without the same value" do
+      (@money1 == 10).should be_false
+    end
+  end
+  
+  describe "def =~(money_or_thing)" do
+    before :each do
+      @money1 = Money.new(500, "USD", 2)
+    end
+    
+    it "should return true if the money value and currency are the same" do
+      (@money1 =~ Money.new(500)).should be_true
+    end
+    
+    it "should return false if the money value is not equal" do
+      (@money1 =~ Money.new(23)).should be_false
+    end
+    
+    it "should return false if the money currency is not equal" do
+      (@money1 =~ Money.new(500, "GBP")).should be_false
+    end
+    
+    it "should return false if the money precision is not equal" do
+      (@money1 =~ Money.new(500, "USD", 7)).should be_false
+    end
+    
+    it "should return true if compared to a number of the same value" do
+      (@money1 =~ 5).should be_true
+    end
+    
+    it "should return false if compared ot a number without the same value" do
+      (@money1 =~ 10).should be_false
     end
   end
   
