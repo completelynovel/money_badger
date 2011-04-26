@@ -98,7 +98,7 @@ class Bank
       if exchange_rates[currency]
         exchange_rates[currency]
       else
-        raise Money::MoneyError.new("Bank does not support the money exchange between #{self.currency} and #{currency}, please add more currency exchange rates.")
+        raise Money::MoneyError.new("Bank does not have the rate for #{currency}, please add more currency exchange rates.")
       end
     end
   
