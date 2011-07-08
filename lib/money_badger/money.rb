@@ -52,42 +52,42 @@ class Money
   
   def +(other_money)
     return self if other_money.nil? || other_money.value == 0
-    (BigDecimal.new(self.to_s) + BigDecimal.new(other_money.exchange_to(currency).to_s)).
-    to_f.to_money(:currency => currency)
+    (BigDecimal.new(self) + BigDecimal.new(other_money.exchange_to(currency))).
+    to_f.to_money(:currency => currency, :precision => self.precision)
   end
 
   def -(other_money)
     return self if other_money.nil? || other_money.value == 0
-    (BigDecimal.new(self.to_s) - BigDecimal.new(other_money.exchange_to(currency).to_s)).
-    to_f.to_money(:currency => currency)
+    (BigDecimal.new(self) - BigDecimal.new(other_money.exchange_to(currency))).
+    to_f.to_money(:currency => currency, :precision => self.precision)
   end
 
   # multiply money by fixnum
   def *(number)
-    (BigDecimal.new(self.to_s) * BigDecimal.new(number.to_s)).
-    to_f.to_money(:currency => currency)
+    (BigDecimal.new(self) * BigDecimal.new(number.to_s)).
+    to_f.to_money(:currency => currency, :precision => self.precision)
   end
 
   # divide money by fixnum
   def /(number)
-    (BigDecimal.new(self.to_s) / BigDecimal.new(number.to_s)).
-    to_f.to_money(:currency => currency)
+    (BigDecimal.new(self) / BigDecimal.new(number.to_s)).
+    to_f.to_money(:currency => currency, :precision => self.precision)
   end
   
   def <=(money_or_float)
-    BigDecimal.new(self.to_s) <= BigDecimal.new(money_or_float.to_s)
+    BigDecimal.new(self) <= BigDecimal.new(money_or_float.to_f.to_s)
   end
   
   def >=(money_or_float)
-    BigDecimal.new(self.to_s) >= BigDecimal.new(money_or_float.to_s)
+    BigDecimal.new(self) >= BigDecimal.new(money_or_float.to_f.to_s)
   end
   
   def <(money_or_float)
-    BigDecimal.new(self.to_s) < BigDecimal.new(money_or_float.to_s)
+    BigDecimal.new(self) < BigDecimal.new(money_or_float.to_f.to_s)
   end
   
   def >(money_or_float)
-    BigDecimal.new(self.to_s) > BigDecimal.new(money_or_float.to_s)
+    BigDecimal.new(self) > BigDecimal.new(money_or_float.to_f.to_s)
   end
   
   # return Boolean true if the value, currency and precision are the same
@@ -172,7 +172,7 @@ class Money
     self.value.to_f / 10 ** precision
   end
 
-  def to_s
+  def to_str
     self.to_f.to_s
   end
   

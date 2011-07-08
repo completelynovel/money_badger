@@ -1,9 +1,9 @@
-require 'hpricot'
+require 'nokogiri'
 require 'open-uri'
 
 class Bank
   
-  @@config                    = {}
+  @@config                    = {'exchange_rates' => {}}
   @@rates_url                 = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
   
   class << self
@@ -47,7 +47,6 @@ class Bank
     end
     
     def config=(config_hash)
-      @@config['exchange_rates'] = {}
       @@config.merge!(config_hash)
     end
   
@@ -86,14 +85,19 @@ class Bank
     
     def fetch_rates
       begin
-        doc = Hpricot.XML(open(rates_url))
-        doc.search("gesmes:Envelope/Cube/Cube/Cube")
+        doc = get_rates
+        doc.remove_namespaces!
+        doc.xpath("/Envelope/Cube/Cube/Cube")
       rescue
         raise Money::MoneyError.new("failing to fetch currency rates.")
         {}
       end
     end
     
+    def get_rates
+      Nokogiri.XML(open(rates_url))
+    end
+
     def rate_for(currency)
       if exchange_rates[currency]
         exchange_rates[currency]

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Money do
   
-  let (:money)    { Money.new(1000) }
+  let (:money)    { Money.new(10, "USD", 2) }
   let (:dollars)  { Money.new(500, "USD") }
   let (:pounds)   { Money.new(300, "GBP") }
   let (:euros)    { Money.new(100, "EUR") }
@@ -98,140 +98,102 @@ describe Money do
   end
   
   describe "def +(other_money)" do
-    
-    before :each do
-      @money1 = Money.new(5)
-      @money2 = Money.new(10)
-    end
-    
     it "should add two money values together if currencies and precisions are the same" do
-      sum = @money1 + @money2
-      sum.value.should == Money.new(15).value
+      sum = Money.new(5) + Money.new(10)
+      sum.should == Money.new(15)
     end
   end
   
   describe "def -(other_money)" do
-    
-    before :each do
-      @money1 = Money.new(15)
-      @money2 = Money.new(10)
-    end
-    
     it "should subtract the second from the first if currencies and precisions are the same" do
-      sum = @money1 - @money2
-      sum.value.should == Money.new(5).value
+      sum = Money.new(15) - Money.new(10)
+      sum.should == Money.new(5)
     end
   end
   
   describe "def *(FixNum)" do
-    
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
     it "should multiply the money by the fixnum" do
-      sum = @money1 * 5
-      sum.value.should == Money.new(50).value
+      sum = Money.new(10) * 5
+      sum.should == Money.new(50)
     end
   end
   
   describe "def /(FixNum)" do
-    
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
     it "should divide the money by the fixnum" do
-      sum = @money1 / 5
-      sum.value.should == Money.new(2).value
+      sum = Money.new(10) / 5
+      sum.should == Money.new(2)
     end
   end
   
   describe "def <=(FixNum)" do
     
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
     it "should return true if the money is less than another money or float" do
-      (@money1 <= Money.new(50)).should be_true
-      (@money1 <= 20).should be_true
+      (money <= Money.new(50)).should be_true
+      (money <= 20).should be_true
     end
     
     it "should return true if the money is the same as another money or float" do
-      (@money1 <= @money1).should be_true
-      (@money1 <= 0.1).should be_true
+      (money <= money).should be_true
+      (money <= 0.1).should be_true
     end
     
     it "should return false if the money is more than another money or float" do
-      (@money1 <= Money.new(5)).should be_false
-      (@money1 <= 0.05).should be_false
+      (money <= Money.new(5)).should be_false
+      (money <= 0.05).should be_false
     end
   end
   
   describe "def >=(FixNum)" do
     
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
     it "should return false if the money is less than another money or float" do
-      (@money1 >= Money.new(50)).should be_false
-      (@money1 >= 20).should be_false
+      (money >= Money.new(50)).should be_false
+      (money >= 20).should be_false
     end
     
     it "should return true if the money is the same as another money or float" do
-      (@money1 >= @money1).should be_true
-      (@money1 >= 0.1).should be_true
+      (money >= money).should be_true
+      (money >= 0.1).should be_true
     end
     
     it "should return true if the money is more than another money or float" do
-      (@money1 >= Money.new(5)).should be_true
-      (@money1 >= 0.05).should be_true
+      (money >= Money.new(5)).should be_true
+      (money >= 0.05).should be_true
     end
   end
   
   describe "def >(money_or_fixnum)" do
-    
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
+
     it "should return false if the money is less than another money or float" do
-      (@money1 > Money.new(50)).should be_false
-      (@money1 > 20).should be_false
+      (money > Money.new(50)).should be_false
+      (money > 20).should be_false
     end
     
     it "should return false if the money is the same as another money or float" do
-      (@money1 > @money1).should be_false
-      (@money1 > 0.1).should be_false
+      (money > money).should be_false
+      (money > 0.1).should be_false
     end
     
     it "should return true if the money is more than another money or float" do
-      (@money1 > Money.new(5)).should be_true
-      (@money1 > 0.05).should be_true
+      (money > Money.new(5)).should be_true
+      (money > 0.05).should be_true
     end
   end
   
   describe "def <(money_or_fixnum)" do
-    
-    before :each do
-      @money1 = Money.new(10)
-    end
-    
+
     it "should return true if the money is less than another money or float" do
-      (@money1 < Money.new(50)).should be_true
-      (@money1 < 20).should be_true
+      (money < Money.new(50)).should be_true
+      (money < 20).should be_true
     end
     
     it "should return false if the money is the same as another money or float" do
-      (@money1 < @money1).should be_false
-      (@money1 < 0.1).should be_false
+      (money < money).should be_false
+      (money < 0.1).should be_false
     end
     
     it "should return false if the money is more than another money or float" do
-      (@money1 < Money.new(5)).should be_false
-      (@money1 < 0.05).should be_false
+      (money < Money.new(5)).should be_false
+      (money < 0.05).should be_false
     end
   end
   
@@ -247,110 +209,100 @@ describe Money do
   end
   
   describe "def ==(money_or_thing)" do
-    before :each do
-      @money1 = Money.new(500, "USD", 2)
-    end
     
     it "should return true if the money value, currency and precision are the same" do
-      (@money1 == Money.new(500, "USD", 2)).should be_true
+      (money == Money.new(10, "USD", 2)).should be_true
     end
     
     it "should return false if the money value is not equal" do
-      (@money1 == Money.new(23, "USD", 2)).should be_false
+      (money == Money.new(23, "USD", 2)).should be_false
     end
     
     it "should return false if the money currency is not equal" do
-      (@money1 == Money.new(500, "GBP", 2)).should be_false
+      (money == Money.new(10, "GBP", 2)).should be_false
     end
     
     it "should return false if the money precision is not equal" do
-      (@money1 == Money.new(500, "USD", 7)).should be_false
+      (money == Money.new(10, "USD", 7)).should be_false
     end
     
     it "should return true if compared to a number of the same value" do
-      (@money1 == 5).should be_true
+      (money == 0.1).should be_true
     end
     
     it "should return false if compared ot a number without the same value" do
-      (@money1 == 10).should be_false
+      (money == 55).should be_false
     end
   end
   
   describe "def =~(money_or_thing)" do
-    before :each do
-      @money1 = Money.new(500, "USD", 2)
-    end
     
     it "should return true if the money value and currency are the same" do
-      (@money1 =~ Money.new(500)).should be_true
+      (money =~ Money.new(10)).should be_true
     end
     
     it "should return false if the money value is not equal" do
-      (@money1 =~ Money.new(23)).should be_false
+      (money =~ Money.new(23)).should be_false
     end
     
     it "should return false if the money currency is not equal" do
-      (@money1 =~ Money.new(500, "GBP")).should be_false
+      (money =~ Money.new(10, "GBP")).should be_false
     end
     
     it "should return false if the money precision is not equal" do
-      (@money1 =~ Money.new(500, "USD", 7)).should be_false
+      (money =~ Money.new(10, "USD", 7)).should be_false
     end
     
     it "should return true if compared to a number of the same value" do
-      (@money1 =~ 5).should be_true
+      (money =~ 0.1).should be_true
     end
     
     it "should return false if compared ot a number without the same value" do
-      (@money1 =~ 10).should be_false
+      (money =~ 55).should be_false
     end
   end
   
   describe "def eql?(other_money)" do
-    before :each do
-      @money1 = Money.new(500)
-    end
     
     it "should return true if the money values are the same" do
-      @money1.eql?(Money.new(500)).should be_true
+      money.eql?(Money.new(10)).should be_true
     end
     
     it "should return false if the money value is not equal" do
-      @money1.eql?(Money.new(23)).should be_false
+      money.eql?(Money.new(23)).should be_false
     end
   end
   
   describe "def format" do
     before :each do
-      @money1 = Money.new(500, "USD")
-      @money1.stub(:currency_symbol).and_return("$")
+      money.stub(:currency_symbol).and_return("$")
     end
     
     it "should return a string of the currency symbol plus a 2 decimal place number" do
-      @money1.format.should == "$5.00"
+      money.format.should == "$0.10"
     end
     
     it "should return a string of the currency symbol plus a 3 decimal place number when precision is set to 3" do
-      @money1.format(:precision => 3).should == "$5.000"
+      money.format(:precision => 3).should == "$0.100"
     end
     
     it "should return a string of the number when hide_symbol is set to true" do
-      @money1.format(:hide_symbol => true).should == "5.00"
+      money.format(:hide_symbol => true).should == "0.10"
     end
   end
   
   describe "def currency_symbol" do
     before :each do
       Bank.stub(:symbol_for).with("USD").and_return("$")
-      Bank.stub(:symbol_for).with("GBP").and_return("£")
+      Bank.stub(:symbol_for).with("GBP").and_return("GBP")
     end
     
     it "should return a $ when currency is USD" do
       Money.new(500, "USD").currency_symbol.should == "$"
     end
     
-    it "should return a £ when currency is GBP" do
-      Money.new(500, "GBP").currency_symbol.should == "£"
+    it "should return a GBP when currency is GBP" do
+      Money.new(500, "GBP").currency_symbol.should == "GBP"
     end
   end
   
@@ -386,10 +338,10 @@ describe Money do
     
   end
   
-  describe "def to_s" do
+  describe "def to_str" do
     
     it "should put the value in a string of the float" do
-      Money.new(500, "USD").to_s.should == "5.0"
+      Money.new(500, "USD").to_str.should == "5.0"
     end
     
   end
@@ -404,10 +356,10 @@ describe Money do
   
   describe "def exchange_to(currency)" do
     
-    it "should if there are $2 to £1 it should exchange $4 to £2" do
-      @money = Money.new(400, "USD")
-      @money.class.bank.stub(:exchange_rates).and_return({"USD" => 2, "GBP" => 1})
-      @money.exchange_to("GBP")
+    it "should if there are $2 to GBP1 it should exchange $4 to GBP2" do
+      money = Money.new(400, "USD")
+      money.class.bank.stub(:exchange_rates).and_return({"USD" => 2, "GBP" => 1})
+      money.exchange_to("GBP")
     end
     
   end

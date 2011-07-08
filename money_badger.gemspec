@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
   
-  s.add_dependency "hpricot"
+  s.add_dependency "nokogiri"
   s.add_development_dependency "rspec", "~> 2.0.1"
   s.add_development_dependency 'rspec-rails', '~> 1.2'
   s.add_development_dependency "watchr", "~> 0.7"

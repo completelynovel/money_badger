@@ -18,7 +18,7 @@ module MoneyBadger
       if options[:precision]
         precision = options[:precision]
       else
-        precision = scan(/\.(\d+)/).to_s.length # look for the decimal point
+        precision = self.scan(/\.(\d+)/).flatten.join("").length # look for the decimal point
       end
       precision = Money.default_precision if precision < 2 # reset to default precision if not precise enough
 

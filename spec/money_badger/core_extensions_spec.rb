@@ -19,7 +19,8 @@ module MoneyBadger
       end
       
       it "should recognize the precision from the position of the decimal place" do
-        "500.0432".to_money.precision.should == 4
+        m = "500.0432".to_money
+        m.precision.should == 4
       end
       
       it "should recognize the currency from the 3 letter iso prefix" do
