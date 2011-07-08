@@ -58,10 +58,12 @@ describe Bank do
   describe "def update_rates" do
     before :each do
       Bank.stub(:config).and_return(
-        {:commission => 0, 
-        :exchange_rates => {:EUR => 1, :USD => 1.4434, :JPY => 122.26, :GBP => 0.8836, :CREDIT => :USD}, 
-        :currency_symbols => { :GBP => "£", :EUR => "€", :CREDIT => "#" } 
-        })
+        {
+          :commission         => 0, 
+          :exchange_rates     => {:EUR => 1, :USD => 1.4434, :JPY => 122.26, :GBP => 0.8836}, 
+          :currency_symbols   => { :GBP => 'G', :EUR => "E", :JPY => "#" } 
+        }
+      )
     end
     
     it "should clear the rates" do
@@ -157,20 +159,17 @@ describe Bank do
     end
     
     it "should convert one currency into another if the currencies are different" do
-      Bank.stub(:rate_for).with("USD").and_return(2)
-      Bank.stub(:rate_for).with("GBP").and_return(2)
-      Bank.stub(:commission).and_return(0)
-      Bank.exchange(@dollars, "GBP").value.should == @pounds.value
+      Bank.exchange(@dollars, "GBP").should == @pounds * Bank.exchange_rates["GBP"]
     end
     
   end
   
   describe "def symbol_for(currency)" do
     
-    it "should return $ for USD and £ for GBP" do
-      Bank.stub(:currency_symbols).and_return({"USD" => "$", "GBP" => "£"})
+    it "should return $ for USD and E for GBP" do
+      Bank.stub(:currency_symbols).and_return({"USD" => "$", "GBP" => "E"})
       Bank.symbol_for("USD").should == "$"
-      Bank.symbol_for("GBP").should == "£"
+      Bank.symbol_for("GBP").should == "E"
     end
     
   end

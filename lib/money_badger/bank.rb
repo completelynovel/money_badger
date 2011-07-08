@@ -3,19 +3,18 @@ require 'open-uri'
 
 class Bank
   
-  @@exchange_rates            = {}
   @@config                    = {}
   @@rates_url                 = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
   
   class << self
     def exchange_rates(options = {})
-      self.update_rates if @@exchange_rates.empty? && !options[:prevent_update]
-      @@exchange_rates
+      self.update_rates if @@config['exchange_rates'].empty? && !options[:prevent_update]
+      @@config['exchange_rates']
     end
     
     def exchange_rates=(rates_hash)
       return false unless rates_hash.is_a?(Hash)
-      @@exchange_rates = rates_hash
+      @@config['exchange_rates'] = rates_hash
     end
     
     def commission
@@ -48,6 +47,7 @@ class Bank
     end
     
     def config=(config_hash)
+      @@config['exchange_rates'] = {}
       @@config.merge!(config_hash)
     end
   
@@ -62,11 +62,11 @@ class Bank
       fetch_rates.each do |currency_rate|
         add_currency_rate(currency_rate[:currency], currency_rate[:rate].to_f)
       end
-      @@exchange_rates
+      @@config['exchange_rates']
     end
     
     def add_currency_rate(currency, rate)
-      @@exchange_rates[currency] = rate
+      @@config['exchange_rates'][currency] = rate
     end
     
     def add_currency_rates(rates_hash = {})
@@ -74,14 +74,14 @@ class Bank
       rates_hash.each do |currency, rate|
         # if the rate is a reference to another currency set it to the same rate otherwise use value
         if rate.is_a?(String)
-          rate = @@exchange_rates[rate]
+          rate = @@config['exchange_rates'][rate]
         end
-        @@exchange_rates[currency] = rate
+        @@config['exchange_rates'][currency] = rate
       end
     end
     
     def clear_rates
-      @@exchange_rates.clear
+      @@config['exchange_rates'].clear
     end
     
     def fetch_rates

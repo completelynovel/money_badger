@@ -44,7 +44,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 3.0.0)
-  hpricot
   money_badger!
   rspec (~> 2.0.1)
   rspec-rails (~> 1.2)
