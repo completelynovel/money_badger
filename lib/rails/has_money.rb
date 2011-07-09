@@ -75,7 +75,7 @@ module MoneyBadger
           end
                     
           def #{name}=(amount)
-            opt   = self.class.money_options[:#{name}]
+            opt   = self.class.money_options[:#{name.to_sym}]
             money = amount.to_money(:precision => opt[:precision], :currency => self.#{self.money_options[name][:currency_field]})
             
             raise_wrong_currency_type(self.send(opt[:currency_field]), money.currency) unless amount.is_a?(Money)

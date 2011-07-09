@@ -1,0 +1,2574 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (170.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (90.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (145.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (204.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (178.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (176.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (122.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (158.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (162.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (163.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (132.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.0ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (135.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (165.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (118.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (160.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (125.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (143.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (126.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (106.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (147.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (123.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (142.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (139.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (101.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (89.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (94.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (150.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (143.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (113.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (123.9ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.4ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (104.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (151.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (114.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (115.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (119.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (117.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (159.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (463.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.4ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (154.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (162.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.4ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (119.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (131.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (131.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (153.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (115.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (110.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (110.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (172.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (131.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (168.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (177.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (155.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (122.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (144.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (168.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (171.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (135.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (134.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (198.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (133.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (109.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (119.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (124.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (165.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (144.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (91.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.0ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (110.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (139.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.4ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (164.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (152.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (123.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (131.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (115.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (141.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (156.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (148.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (147.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (150.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (155.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (141.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (104.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (110.0ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (110.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (242.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (150.9ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (153.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (124.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (209.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (163.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (167.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (138.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (165.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (168.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (156.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (142.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (139.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (158.0ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (143.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (89.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (168.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (153.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (154.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (123.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (154.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (154.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (146.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (123.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (89.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (126.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (121.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (171.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (147.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (89.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (178.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (155.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (129.9ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (153.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (162.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (171.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (169.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (138.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (159.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (154.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (169.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (99.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (128.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (109.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (139.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (82.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (115.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (120.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (82.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (120.0ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (144.6ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (120.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (97.7ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (179.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (162.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (140.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (146.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (146.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (130.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (154.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (138.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (89.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (152.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.5ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.5ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (106.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (144.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (1.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (140.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (106.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (144.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (129.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (114.6ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (135.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.4ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.9ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (115.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (120.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (161.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.8ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.5ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (154.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (73.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (82.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.3ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (129.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (128.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (121.5ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (89.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (149.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.3ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.1ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (128.7ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.9ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (121.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.9ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (108.9ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.2ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (121.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (121.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (104.8ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (112.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (120.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (120.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (97.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (89.9ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (113.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (130.0ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (113.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.1ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (105.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (98.2ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (129.2ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (137.2ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (81.8ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (114.6ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (89.7ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (133.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (110.4ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (119.4ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (123.3ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (89.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (104.1ms)[0m  [1mDROP TABLE "money_transactions"[0m
+  [1m[35mSQL (90.1ms)[0m  CREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (112.7ms)[0m  DROP TABLE "money_transactions"
+  [1m[36mSQL (81.8ms)[0m  [1mCREATE TABLE "money_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "currency" varchar(255), "amount_value" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m

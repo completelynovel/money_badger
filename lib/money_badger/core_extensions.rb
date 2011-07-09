@@ -47,7 +47,7 @@ module MoneyBadger
         options[:precision] = self.precision
       end
     
-      to_s.to_money(options)
+      to_f.to_s.to_money(options)
     end
   
   end

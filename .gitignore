@@ -1,3 +1,4 @@
 pkg/*
 *.gem
 .bundle
+spec/rails/3/db/test.sqlite3

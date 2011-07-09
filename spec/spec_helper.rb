@@ -1,8 +1,33 @@
-require 'rubygems'
-require 'bundler/setup'
+ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ROOT'] ||= File.join(File.dirname(__FILE__), 'rails3')
 
-require 'money_badger'
+require File.expand_path('config/environment', ENV['RAILS_ROOT'])
+
+begin
+  require 'rspec'
+  require 'rspec/rails'
+rescue LoadError => e
+  require 'spec'
+  require 'spec/rails'
+end
+require 'rake'
+
+def load_schema
+  stdout = $stdout
+  $stdout = StringIO.new # suppress output while building the schema
+  load File.join(ENV['RAILS_ROOT'], 'db', 'schema.rb')
+  $stdout = stdout
+end
+
+def silence_stderr(&block)
+  stderr = $stderr
+  $stderr = StringIO.new
+  yield
+  $stderr = stderr
+end
 
 RSpec.configure do |config|
-  # some (optional) config here
+  config.before(:each) do
+    load_schema
+  end
 end

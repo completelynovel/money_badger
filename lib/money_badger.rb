@@ -7,4 +7,4 @@ require 'money_badger/version'
 # rails addition
 ['rails/has_money', 'rails/money_badger_init'].each do |file|
   require file
-end if defined? ActiveRecord
+end if defined? ActiveRecord || defined? ActiveModel

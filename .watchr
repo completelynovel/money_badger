@@ -5,7 +5,7 @@ end
 
 def spec(file)
   if File.exists?(file)
-    run("rspec #{file}")
+    run("bundle exec rspec #{file}")
   else
     puts("Spec: #{file} does not exist.")
   end
