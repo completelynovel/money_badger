@@ -91,7 +91,7 @@ class Money
   end
   
   # return Boolean true if the value, currency and precision are the same
-  def ==(thing)
+  def ===(thing)
     if thing.is_a?(Money)
       self.to_f == thing.to_f && self.currency == thing.currency && self.precision == thing.precision
     elsif thing.respond_to?(:to_f)
@@ -101,10 +101,21 @@ class Money
     end
   end
   
-  # return Boolean true if the value is the same
-  def =~(thing)
+  # return Boolean true if the value and currency are the same
+  def ==(thing)
     if thing.is_a?(Money)
       self.to_f == thing.to_f && self.currency == thing.currency
+    elsif thing.respond_to?(:to_f)
+      self.to_f == thing.to_f
+    else
+      false
+    end
+  end
+  
+  # return Boolean true if the value is the same even if in a different currency
+  def =~(thing)
+    if thing.is_a?(Money)
+      self.to_f == thing.exchange_to(self.currency)
     elsif thing.respond_to?(:to_f)
       self.to_f == thing.to_f
     else

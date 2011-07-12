@@ -1,4 +1,5 @@
 pkg/*
 *.gem
 .bundle
-spec/rails/3/db/test.sqlite3
+spec/rails3/db/test.sqlite3
+spec/rails3/log/*

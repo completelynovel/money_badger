@@ -208,6 +208,33 @@ describe Money do
     end
   end
   
+  describe "def ===(money_or_thing)" do
+    
+    it "should return true if the money value, currency and precision are the same" do
+      (money === Money.new(10, "USD", 2)).should be_true
+    end
+    
+    it "should return false if the money value is not equal" do
+      (money === Money.new(23, "USD", 2)).should be_false
+    end
+    
+    it "should return false if the money currency is not equal" do
+      (money === Money.new(10, "GBP", 2)).should be_false
+    end
+    
+    it "should return false if the money precision is not equal" do
+      (money === Money.new(10, "USD", 7)).should be_false
+    end
+    
+    it "should return true if compared to a number of the same value" do
+      (money === 0.1).should be_true
+    end
+    
+    it "should return false if compared ot a number without the same value" do
+      (money === 55).should be_false
+    end
+  end
+  
   describe "def ==(money_or_thing)" do
     
     it "should return true if the money value, currency and precision are the same" do
@@ -222,8 +249,8 @@ describe Money do
       (money == Money.new(10, "GBP", 2)).should be_false
     end
     
-    it "should return false if the money precision is not equal" do
-      (money == Money.new(10, "USD", 7)).should be_false
+    it "should return true if value and currency are the same but the precision is not" do
+      (money == Money.new(100, "USD", 3)).should be_true
     end
     
     it "should return true if compared to a number of the same value" do
@@ -237,19 +264,23 @@ describe Money do
   
   describe "def =~(money_or_thing)" do
     
-    it "should return true if the money value and currency are the same" do
-      (money =~ Money.new(10)).should be_true
+    it "should return true if the money value, currency and precision are the same" do
+      (money =~ Money.new(10, "USD", 2)).should be_true
     end
     
     it "should return false if the money value is not equal" do
-      (money =~ Money.new(23)).should be_false
+      (money =~ Money.new(23, "USD", 2)).should be_false
     end
     
     it "should return false if the money currency is not equal" do
       (money =~ Money.new(10, "GBP")).should be_false
     end
+
+    it "should return true if the value is the same once the currency is converted" do
+      (money =~ Money.new(10, "USD").exchange_to("GBP")).should be_true
+    end
     
-    it "should return false if the money precision is not equal" do
+    it "should return true if the money value and currency are the same but the money precision is not" do
       (money =~ Money.new(10, "USD", 7)).should be_false
     end
     
