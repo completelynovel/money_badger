@@ -183,6 +183,10 @@ class Money
     self.value.to_f / 10 ** precision
   end
 
+  def to_s
+    self.to_str
+  end
+
   def to_str
     self.to_f.to_s
   end
