@@ -123,11 +123,6 @@ class Money
     end
   end
   
-  # return Boolean true if the value, currency and precision are not the same
-  def !=(thing)
-    !(self == thing)
-  end
-  
   # ------------- Interrogation -----------------------
   
   # Test if the money amount is zero
