@@ -3,14 +3,7 @@ ENV['RAILS_ROOT'] ||= File.join(File.dirname(__FILE__), 'rails3')
 
 require File.expand_path('config/environment', ENV['RAILS_ROOT'])
 
-begin
-  require 'rspec'
-  require 'rspec/rails'
-rescue LoadError => e
-  require 'spec'
-  require 'spec/rails'
-end
-require 'rake'
+require 'rspec/rails'
 
 def load_schema
   stdout = $stdout
