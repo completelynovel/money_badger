@@ -2,9 +2,8 @@ module MoneyBadger
   
   module HasMoney
 
-    extend ActiveSupport::Concern
-
-    included do
+    def self.included(base)
+      base.send :extend, ClassMethods
     end
     
     module ClassMethods
@@ -17,6 +16,8 @@ module MoneyBadger
       # - :precision => "precision field/method name"
       #
       def has_money(name, options = {})
+
+        send :include, InstanceMethods
             
         #####
         # Init the money option
@@ -93,12 +94,15 @@ module MoneyBadger
       end
       
     end
-      
-    def raise_wrong_currency_type(currency1, currency2)
-      unless currency1.present? && currency2.present? && currency1 == currency2 || self.new_record?
-        raise "Currency is set to #{currency1} - can't assign Money value with currency of #{currency2}"
-      end        
+ 
+    module InstanceMethods
+      def raise_wrong_currency_type(currency1, currency2)
+        unless currency1.present? && currency2.present? && currency1 == currency2 || self.new_record?
+          raise "Currency is set to #{currency1} - can't assign Money value with currency of #{currency2}"
+        end        
+      end
     end
+      
     
   end
   

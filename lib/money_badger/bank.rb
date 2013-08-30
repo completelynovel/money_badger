@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-
 class Bank
   
   @@config                    = {'exchange_rates' => {}}

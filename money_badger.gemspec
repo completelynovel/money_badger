@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
   
   s.add_dependency "nokogiri"
+  s.add_dependency "activesupport"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rails", "~> 3.2.0"
   s.add_development_dependency "sqlite3-ruby"
