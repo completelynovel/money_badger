@@ -130,6 +130,11 @@ class Money
     value == 0 
   end
 
+  # Used in validates presence of rails validations
+  def blank?
+    value.blank?
+  end
+
   # Do two money objects equal? Only works if both objects are of the same currency
   def eql?(other_money)
     self == other_money
@@ -178,8 +183,8 @@ class Money
     self.value.to_f / 10 ** precision
   end
 
-  def to_s
-    self.to_str
+  def to_s(options = {})
+    self.format(options)
   end
 
   def to_str
